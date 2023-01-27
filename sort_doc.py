@@ -68,7 +68,7 @@ def AugmentXYCut_document(docs, lx=0.5, ly=0.5, theta=5):
 
 
 if __name__ == "__main__":
-    with open("/Users/hsy963/project/TempProj/kie_svrd/DataProcess/data/xftask1/t1.train.json", "r", encoding="utf-8") as f:
+    with open("train.json", "r", encoding="utf-8") as f:
         docs = json.load(f)
     AugmentXYCut_document(docs)
     # total documents: 1503
