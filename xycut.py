@@ -77,6 +77,9 @@ def recursive_xy_cut(boxes: np.ndarray, indices: List[int], res: List[int]):
         res: 保存输出结果
 
     """
+    if boxes.shape[0] < 1:
+        return
+
     # 向 y 轴投影
     assert len(boxes) == len(indices)
 
@@ -186,7 +189,7 @@ def vis_polygon(img, points, thickness=2, color=None):
 
 
 def vis_points(
-    img: np.ndarray, points, texts: List[str] = None, color=(0, 200, 0)
+    img: np.ndarray, points, texts: List[str] = None, color=(200, 0, 0)
 ) -> np.ndarray:
     """
 
